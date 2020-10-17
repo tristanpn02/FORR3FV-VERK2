@@ -1,0 +1,196 @@
+<style>
+    body { margin: 0; }
+    canvas { display: block; }
+</style>
+
+
+<script src="lib/three.min.js"></script>
+<script src="lib/OrbitControls.js"></script>
+
+
+<script type="module">
+    // Rnd Num Gen
+    function getRndInt(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    // Width and Height
+    let win_W = 500;
+    let win_H = 500;
+
+    // Materials
+    const materials = {
+        orange: new THREE.MeshStandardMaterial({
+            color: "#ca4c08"
+        }),
+        green: new THREE.MeshStandardMaterial({
+            color: "#306b06"
+        })
+    };
+
+    // Shadows
+    const shadowSupport = (group) => {
+        group.traverse((object) => {
+            if (object instanceof THREE.Mesh) {
+                object.castShadow = true;
+                object.receiveShadow = true;
+            }
+        });
+    };
+
+    // Renderer
+    const renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true
+    });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setClearColor(0x000, .7);
+
+    renderer.setSize(win_W, win_H);
+    renderer.shadowMap.enabled = true;
+    document.body.appendChild(renderer.domElement);
+
+    // Scene
+    const scene = new THREE.Scene();
+
+    // Camera
+    const camera = new THREE.PerspectiveCamera(45, win_W/win_H, 1, 1000);
+    camera.position.set(40, 20, 100);
+    scene.add(camera);
+
+    // Controls
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.minDistance = 50;
+    controls.maxDistance = 250;
+
+    // ResizeHandler
+    const resizeHandler = () => {
+        win_W = window.innerWidth;
+        win_H = window.innerHeight;
+
+        renderer.setSize(win_W, win_H);
+        camera.aspect = win_W / win_H;
+        camera.updateProjectionMatrix();
+    }
+    window.addEventListener('resize', resizeHandler, false);
+    resizeHandler();
+
+
+    // Carrot
+    class Carrot {
+        constructor() {
+            this.mesh = new THREE.Group();
+
+            this.body = this._createBody();
+            this.leafs = this._createLeafs();
+
+            this.mesh.rotateOnAxis(new THREE.Vector3(1, 0, 0), -Math.PI/2);
+            this.mesh.rotateOnAxis(new THREE.Vector3(0, 0, 1), Math.PI/2);
+
+            this.mesh.add(this.body);
+            this.mesh.add(this.leafs);
+        }
+
+        animate() {
+            this.mesh.rotation.z += 0.003;
+        }
+
+        // Body
+        _createBody() {
+            const group = new THREE.Group();
+
+            const bodyGeom = new THREE.CylinderGeometry(4.2, 2, 25);
+            bodyGeom.vertices[16].y += 3;
+            bodyGeom.vertices[17].y -= 10;
+
+            bodyGeom.computeFaceNormals();
+            bodyGeom.computeVertexNormals();
+
+            group.add(new THREE.Mesh(bodyGeom, materials.orange));
+
+            shadowSupport(group);
+
+            return group;
+        }
+
+        // Leafs
+        _createLeafs() {
+            const group = new THREE.Group();
+            const geometry = new THREE.CylinderGeometry(1.5, 1, 5, 4);
+
+            geometry.computeFaceNormals();
+            geometry.computeVertexNormals();
+
+            geometry.vertices[8].y += 0.5;
+
+            // Primary Leaf
+            const leafPrime = new THREE.Mesh(geometry, materials.green);
+            leafPrime.position.y = 16;
+            group.add(leafPrime);
+
+            // Leaf Generator
+            let leaf;
+            let oldLeaf = leafPrime.clone();
+            for (let i = 0; i < 5; i++) {
+                leaf = leafPrime.clone();
+
+                // Alternate Positions
+                if (i > 2) {
+                    leaf.position.x = 0;
+                    leaf.rotation.z = 0;
+                    if (oldLeaf.position.z === 0) {
+                        leaf.position.z = 1.75;
+                        leaf.rotation.x = 0.6;
+                    } else {
+                        leaf.position.z = oldLeaf.position.z * -1
+                        leaf.rotation.x = oldLeaf.rotation.x * -1
+                    }
+
+                    // Initial Positions
+                } else {
+                    if (oldLeaf.position.x === 0) {
+                        leaf.position.x = -1.75
+                        leaf.rotation.z = 0.6;
+                    } else {
+                        leaf.position.x = oldLeaf.position.x * -1
+                        leaf.rotation.z = oldLeaf.rotation.z * -1
+                    }
+                }
+                oldLeaf = leaf;
+                group.add(leaf);
+            }
+
+            shadowSupport(group);
+
+            return group;
+        }
+    }
+
+    // Lights
+    (function setupLights() {
+        const directional = new THREE.DirectionalLight(0xffffff, 1);
+        directional.position.set(30, 20, 0);
+        directional.castShadow = true;
+
+        scene.add(new THREE.AmbientLight(0xc5f5f5, 1));
+        scene.add(directional);
+    }());
+
+    // Add Elements
+    let carrot = new Carrot();
+
+    (function addElements() {
+        scene.add(carrot.mesh);
+        scene.add(new THREE.GridHelper(100, 10));
+    }());
+
+    // Render
+    const animate = function () {
+        requestAnimationFrame(animate);
+        carrot.animate();
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
+</script>

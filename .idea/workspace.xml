@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="460129f9-e16c-4752-9ba6-ba3b70592cba" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hrkkB1gbRablaCPBf3iwOVbHWe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.main.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Verkefni 2/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Verkefni 2/main.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Verkefni 2/test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.main.html" />
+        <item itemvalue="JavaScript Debug.test.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="460129f9-e16c-4752-9ba6-ba3b70592cba" name="Default Changelist" comment="" />
+      <created>1600776739615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600776739615</updated>
+      <workItem from="1600776740849" duration="4581000" />
+      <workItem from="1600860035335" duration="53000" />
+      <workItem from="1601559711029" duration="10994000" />
+      <workItem from="1601758990126" duration="1218000" />
+      <workItem from="1602099885475" duration="5700000" />
+      <workItem from="1602177882547" duration="417000" />
+      <workItem from="1602701969983" duration="31000" />
+      <workItem from="1602900082816" duration="168000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="427" y="441" key="FileChooserDialogImpl" timestamp="1602701990052">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="427" y="441" key="FileChooserDialogImpl/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602701990052" />
+    <state width="1256" height="397" key="GridCell.Tab.0.bottom" timestamp="1602178299060">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="397" key="GridCell.Tab.0.bottom/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602178299060" />
+    <state width="1256" height="397" key="GridCell.Tab.0.center" timestamp="1602178299060">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="397" key="GridCell.Tab.0.center/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602178299060" />
+    <state width="1256" height="397" key="GridCell.Tab.0.left" timestamp="1602178299060">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="397" key="GridCell.Tab.0.left/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602178299060" />
+    <state width="1256" height="397" key="GridCell.Tab.0.right" timestamp="1602178299060">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="397" key="GridCell.Tab.0.right/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602178299060" />
+    <state width="1256" height="397" key="GridCell.Tab.1.bottom" timestamp="1602178299061">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="397" key="GridCell.Tab.1.bottom/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602178299061" />
+    <state width="1256" height="397" key="GridCell.Tab.1.center" timestamp="1602178299060">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="397" key="GridCell.Tab.1.center/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602178299060" />
+    <state width="1256" height="397" key="GridCell.Tab.1.left" timestamp="1602178299060">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="397" key="GridCell.Tab.1.left/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602178299060" />
+    <state width="1256" height="397" key="GridCell.Tab.1.right" timestamp="1602178299061">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="397" key="GridCell.Tab.1.right/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1602178299061" />
+    <state x="303" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1601567384859">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="303" y="320" width="672" height="678" key="search.everywhere.popup/4480.365.1920.1040/2560.365.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1601567384859" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Verkefni_2$main_html.dat" NAME="main.html Coverage Results" MODIFIED="1601760205392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
